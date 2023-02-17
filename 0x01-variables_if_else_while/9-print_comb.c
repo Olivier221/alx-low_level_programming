@@ -1,8 +1,3 @@
-/*
- * File: 9-print_comb.c
- * Auth: Dusabamahoro Oliver
- */
-
 #include <stdio.h>
 
 /**
@@ -28,4 +23,3 @@ int main(void)
 
 	return (0);
 }
-
