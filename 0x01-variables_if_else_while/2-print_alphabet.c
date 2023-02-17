@@ -1,24 +1,18 @@
-/*
- * File: 7-print_tebahpla.c
- * Auth: Dusabamahoro Olivier
- */
-
 #include <stdio.h>
-
 /**
- * main - printf, puts, etc) is forbidden)
- *
- * Return: Always 0.
+ * main - prints the alphabet in lowercase.
+(*
+ * Return: 0 on success
  */
 int main(void)
 {
-	char letter;
+	char c = 'a';
 
-	for (letter = 'z'; letter >= 'a'; letter--)
-		putchar(letter);
-
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
 	putchar('\n');
-
 	return (0);
 }
-
