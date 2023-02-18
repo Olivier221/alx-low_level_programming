@@ -1,24 +1,25 @@
-/*
- * File: 5-print_numbers.c
- * Auth: Dusabamahoro Olivier
- */
-
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - Prints all single digit numbers of base 10 starting from 0.
- *
- * Return: Always 0.
+ * main - Entry point
+ * Description: prints lowercase alphabets
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int num;
+	int ch;
 
-	for (num = 0; num < 10; num++)
-		printf("%d", num);
-
-	printf("\n");
-
+	for (ch = 'a'; ch <= 'z'; ch++)
+	{
+		if (ch != 'e' && ch != 'q')
+		{
+			putchar(ch);
+		}
+		else
+		{
+		}
+	}
+	putchar('\n');
 	return (0);
 }
 
