@@ -1,36 +1,32 @@
-/*
- * File: 100-print_comb3.c
- * Auth: Dusabamahoro Olivier
- */
-
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - prints all possible different combinations of two digits.
- *
- * Return: Always 0.
+ * main - Entyr point
+ * Description: prints two digits combination
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int digit1, digit2;
+	int c, i;
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+		for (i = '0'; i <= '9'; i++)
 		{
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
+			if (c < i)
+			{
+				putchar(c);
+				putchar(i);
 
-			if (digit1 == 8 && digit2 == 9)
-				continue;
-			
-			putchar(',');
-			putchar(' ');
+				if (c != '8' || (c == '8' && i != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
 
