@@ -1,41 +1,30 @@
-/*
- * File: 101-print_comb4.c
- * Auth: Dusabamahoro Olivier
- */
-
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - Prints all possible different combinations of three different digits,
- *        in ascending order, separated by a comma followed by a space.
- *
- * Return: Always 0.
+ * main - Entry point
+ * Description: checks on the last digit of the assigned var
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int digit1, digit2, digit3;
+	int n, m;
 
-	for (digit1 = 0; digit1 < 8; digit1++)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	m = n % 10;
+	if (m > 5)
 	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
-		{
-			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
-			{
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
-
-				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
-					continue;
-				
-				putchar(',');
-				putchar(' ');
-			}
-		}
+		printf("Last digit of %d is %d and is greater than 5\n", n, m);
 	}
-
-	putchar('\n');
-
+	else if (m < 6 && m != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, m);
+	}
+	else
+	{
+		printf("Last digit of %d is %d and is 0\n", n, m);
+	}
 	return (0);
 }
 
