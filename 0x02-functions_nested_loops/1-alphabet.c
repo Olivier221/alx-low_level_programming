@@ -1,19 +1,15 @@
-#include <main.h>
+#include "main.h"
 /**
- * main - The program should return 0
- *
- * Return: 0
+ * print_alphabet - prints the alphabet, in lowercase, followed by a new line.
+ * Return: 0.
  */
-int main(void)
+void print_alphabet(void)
 {
-	char *sh = <main>;
+	char c;
 
-	while (*sh)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		_putchar(*sh);
-		sh++;
+		_putchar(c);
 	}
 	_putchar('\n');
-
-	return (0);
 }
