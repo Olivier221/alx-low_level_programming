@@ -1,16 +1,19 @@
-#include "main.h"
+#include <main.h>
 /**
- * print_alphabet - prints the english alphabet from a-z.
- * Return: Nothing.
+ * main - The program should return 0
+ *
+ * Return: 0
  */
-void print_alphabet(void)
+int main(void)
 {
-	char c;
+	char *sh = <main>;
 
-	for (c = 'a'; c <= 'z'; c++)
+	while (*sh)
 	{
-		_putchar(c);
+		_putchar(*sh);
+		sh++;
 	}
 	_putchar('\n');
-}
 
+	return (0);
+}
