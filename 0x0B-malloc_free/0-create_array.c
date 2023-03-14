@@ -1,21 +1,20 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-
+#include "bootcamp.h"
 /**
- * *create_array - creates an array of chars, and initializes
- *  it with a specific char.
- *  @c: char to initialize
- *  @size: number of bytes to allocate
- *
- *  Return: a pointer to the array or null if it fails
+ * create_array - creates an array of chars, and initializes it w/ a char
+ * @size: input size of array
+ * @c: initializing char
+ * Return: pointer to the array or NULL if it fails
  */
 char *create_array(unsigned int size, char c)
 {
-	char *array = malloc(size);
+	char *pstr;
+	unsigned int i;
 
-	if (size == 0 || array == 0)
-		return (NULL);
-	while (size--)
-		array[size] = c;
-	return (array);
+	pstr = malloc(sizeof(char) * size);
+	for (i = 0; i < size; i++)
+		pstr[i] = c;
+	pstr[i] = 0;
+	return (size < 1 ? 0 : pstr);
 }
